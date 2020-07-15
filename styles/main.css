@@ -3,3 +3,48 @@
     flex-direction: column;
 }
 
+:root {
+    font-family: 'Merriweather', serif;
+}
+
+.header {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.entry__title {
+    text-align: center;
+}
+
+label {
+    line-height: 2rem;
+}
+
+.record__btn {
+    margin-top:1rem;
+}
+
+.header__title {
+    flex-basis:60%;
+    font-size:3rem;    
+}
+
+body {
+    background: rgb(128,173,158);
+    background: linear-gradient(90deg, rgba(128,173,158,1) 19%, rgba(136,173,128,1) 84%);
+}
+
+.header__logo {
+    margin-left:2rem;
+}
+
+footer {
+    display:flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+    border-top: 1px black solid;
+    margin-top:5rem;
+}

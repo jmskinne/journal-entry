@@ -6,32 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mark's Daily Journal</title>
     <link rel="stylesheet" href="./styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-    <header>
-        <header__logo>
-            <img src="./images/logo.png" alt="" class="header__picture">
-            <h1 class="header__title">Mark's Daily Journal</h1>
-        </header__logo>
+    <header class="header">
+        <div class="header__logo">
+            <img class="header__picture" src="./images/logo.png" alt="">
+        </div>
+        <h1 class="header__title">Mark's Daily Journal</h1>
+        </div>
     </header>
     <main class="journal">
-        <section class="journal-entry">
-
-        </section>
+        
         <section class="compose-entry">
-            <form action="" class="journal__compose"></form>
+            <form action="" class="journal__compose">
+                <h2 class="form__title">Daily Journal</h2>
+            </form>
                 <fieldset class="journal__field">
                     <label for="journalDate">Date:</label>   
                     <input type="date" id="journalDate" name="journalDate">
 
 
                     <label for="concepts">Concepts Covered:</label>
-                        <input type="text" id="concepts" name="concepts">
+                    <input type="text" id="concepts" name="concepts">
                     
 
                     <label for="entry">Journal Entry:</label>
-                        <textarea id="entry" name="entry" rows="5" cols=60>Start typing</textarea>
+                        <textarea id="entry" name="entry" rows="5" cols=60></textarea>
                     
 
                     <label for="mood">Choose a mood:</label>
@@ -44,19 +47,38 @@
                         </select>
                     
                     
-                        <input type="button" value="Record Journal Entry" onclick="">
+                        <input type="button" class="record__btn" value="Record Journal Entry" onclick="">
                 
 
                 </fieldset>     
             </form>
 
         </section>
+        <div class="entry-container">
+            <section class="journal-entry">
+                <div class="entry__title">
+                    <h2>This is where your saved journal entries will go</h2>
+                </div>
+            
+                
+            </section>
+        </div>
     </main>
     <footer>
-
+        <div class="footer__name">
+            <h4>Mark Skinner</h4>
+        </div>
+        <div class="footer_link">
+            <a href="https://github.com/jmskinne">
+                <i class="fa fa-github" style="font-size:36px"></i> 
+            </a>
+        </div>
+        <div class="footer__copyright">
+            <p> &copy; 2020</p>
+        </div>
     </footer>
 
-
+    <script type="text/javascript" src="/scripts/main.js"></script>
 </body>
 
 </html>

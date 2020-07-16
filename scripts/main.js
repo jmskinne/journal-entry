@@ -1,7 +1,7 @@
-const btn = document.querySelector('.record__btn')
+import {EntryListComponent} from "./JournalEntryList.js"
 
-btn.addEventListener('click', function (){
-    console.log("test test test7")
-});
+EntryListComponent()
+
+
 
 

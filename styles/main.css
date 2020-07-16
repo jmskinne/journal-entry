@@ -48,3 +48,14 @@ footer {
     border-top: 1px black solid;
     margin-top:5rem;
 }
+
+.entry-container {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.journalEntry {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}

@@ -1,0 +1,25 @@
+{
+  "entries": [
+    {
+      "date": "2020-07-30",
+      "concept": "Test",
+      "entryContent": "Did it work?",
+      "mood": "angry",
+      "id": 1
+    },
+    {
+      "date": "2020-07-30",
+      "concept": "JS",
+      "entryContent": "Dear lord",
+      "mood": "meh ",
+      "id": 2
+    },
+    {
+      "date": "2020-07-30",
+      "concept": "More JS",
+      "entryContent": "It's working?",
+      "mood": "jubilant",
+      "id": 3
+    }
+  ]
+}

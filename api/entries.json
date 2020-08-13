@@ -4,22 +4,72 @@
       "date": "2020-07-30",
       "concept": "Test",
       "entryContent": "Did it work?",
-      "mood": "angry",
+      "moodId": 1,
       "id": 1
     },
     {
       "date": "2020-07-30",
       "concept": "JS",
       "entryContent": "Dear lord",
-      "mood": "meh ",
+      "moodId": 1,
       "id": 2
     },
     {
-      "date": "2020-07-30",
-      "concept": "More JS",
-      "entryContent": "It's working?",
-      "mood": "jubilant",
+      "date": "2020-08-10",
+      "concept": "Javascript",
+      "entryContent": "Javascript is FUN!!",
+      "moodId": 1,
       "id": 3
+    },
+    {
+      "date": "2020-08-03",
+      "concept": "HTML",
+      "entryContent": "HTML!!!!!!",
+      "moodId": 1,
+      "id": 4
+    },
+    {
+      "date": "2020-08-17",
+      "concept": "REACT",
+      "entryContent": "REACT",
+      "moodId": 1,
+      "id": 5
+    },
+    {
+      "date": "2020-08-06",
+      "concept": "GLASSDALE",
+      "entryContent": "GLASS",
+      "moodId": 3,
+      "id": 6
+    },
+    {
+      "date": "2020-08-12",
+      "concept": "THEN",
+      "entryContent": "THEN",
+      "moodId": 3,
+      "id": 7
+    }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "label": "Happy"
+    },
+    {
+      "id": 2,
+      "label": "Sad"
+    },
+    {
+      "id": 3,
+      "label": "Meh"
+    },
+    {
+      "id": 4,
+      "label": "Jubilant"
+    },
+    {
+      "id": 5,
+      "label": "Angry"
     }
   ]
 }

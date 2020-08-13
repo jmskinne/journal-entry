@@ -8,7 +8,7 @@ const dispatchStateChangeEvent = () => {
 }
 
 export const getJournalEntries = () => {
-    return fetch('http://localhost:3000/entries')
+    return fetch('http://localhost:3000/entries?_expand=mood')
         .then(response => response.json())
         .then(parsedEntries => {
             journal = parsedEntries

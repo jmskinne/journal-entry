@@ -1,13 +1,15 @@
-// import {EntryListComponent} from "./JournalEntryList.js"
-// EntryListComponent()
+import {EntryListComponent} from "./JournalEntryList.js"
 import { JournalForm } from "./JournalForm.js"
-import { EntryListComponent } from "./JournalEntryList.js"
+
+//import { getMoods } from "./MoodProvider.js"
 
 
 
 
 JournalForm()
-EntryListComponent()
+// getMoods()
+//   .then(JournalForm)
 
+EntryListComponent()
 
 

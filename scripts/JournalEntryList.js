@@ -3,6 +3,7 @@ import { JournalEntryComponent } from "./JournalEntry.js"
 
 // DOM reference to where all entries will be rendered
 const contentTarget = document.querySelector(".entry-container")
+const eventHub = document.querySelector(".container")
 
 export const EntryListComponent = () => {
     console.log("entry list component function")
@@ -26,8 +27,27 @@ const render = (entryArray) => {
 
 
 
+eventHub.addEventListener("click", clickEvent => {
+    if(clickEvent.target.id.startsWith("editEntry--")) {
+        const [prefix, entryId] = clickEvent.target.id.split("--")
+        
+        const message = new CustomEvent("editNote", {
+            detail : {
+                editEntryId : parseInt(entryId)
+            }
+        })
+        eventHub.dispatchEvent(message)
+    }
+})
 
+// eventHub.addEventListener("editNote", customEvent => {
+//     const EntrySearchingFor = customEvent.detail.editEntryId
+//     const allEntries = useJournalEntries()
+//     const noteToEdit = allEntries.find(entry => entry.id === EntrySearchingFor)
+    
 
+    
+// })
 
 
 

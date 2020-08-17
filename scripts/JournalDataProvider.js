@@ -47,3 +47,13 @@ export const deleteEntry = (entryId) => {
     .then(getJournalEntries)
     .then(entryDeleted)
 }
+
+export const editEntry = (entryId) => {
+    return fetch(`http://localhost:3000/entries/${entryId}`, {
+        method : "PUT",
+        headers : {
+            "Content-Type" : "application/json"
+        },
+        body : JSON.stringify(entryId)
+    })
+}

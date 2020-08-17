@@ -7,6 +7,11 @@ const dispatchStateChangeEvent = () => {
     eventHub.dispatchEvent(entryAddedStateChange)
 }
 
+const entryDeleted = () => {
+    const entryDeletedState = new CustomEvent("entryDeleted")
+    eventHub.dispatchEvent(entryDeletedState)
+}
+
 export const getJournalEntries = () => {
     return fetch('http://localhost:3000/entries?_expand=mood')
         .then(response => response.json())
@@ -33,4 +38,12 @@ export const saveEntry = (entry) => {
     })
     .then(getJournalEntries)
     .then(dispatchStateChangeEvent)
+}
+
+export const deleteEntry = (entryId) => {
+    return fetch (`http://localhost:3000/entries/${entryId}`, {
+        method: "DELETE"
+    })
+    .then(getJournalEntries)
+    .then(entryDeleted)
 }

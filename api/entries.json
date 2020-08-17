@@ -1,53 +1,11 @@
 {
   "entries": [
     {
-      "date": "2020-07-30",
-      "concept": "Test",
-      "entryContent": "Did it work?",
-      "moodId": 1,
-      "id": 1
-    },
-    {
-      "date": "2020-07-30",
-      "concept": "JS",
-      "entryContent": "Dear lord",
-      "moodId": 1,
-      "id": 2
-    },
-    {
-      "date": "2020-08-10",
-      "concept": "Javascript",
-      "entryContent": "Javascript is FUN!!",
-      "moodId": 1,
-      "id": 3
-    },
-    {
-      "date": "2020-08-03",
-      "concept": "HTML",
-      "entryContent": "HTML!!!!!!",
-      "moodId": 1,
-      "id": 4
-    },
-    {
-      "date": "2020-08-17",
-      "concept": "REACT",
-      "entryContent": "REACT",
-      "moodId": 1,
-      "id": 5
-    },
-    {
-      "date": "2020-08-06",
-      "concept": "GLASSDALE",
-      "entryContent": "GLASS",
-      "moodId": 3,
-      "id": 6
-    },
-    {
       "date": "2020-08-12",
-      "concept": "THEN",
-      "entryContent": "THEN",
-      "moodId": 3,
-      "id": 7
+      "concept": "ewrgerb",
+      "entryContent": "ewrberwb",
+      "moodId": 2,
+      "id": 5
     }
   ],
   "moods": [

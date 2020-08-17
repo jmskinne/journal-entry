@@ -1,14 +1,12 @@
 import {EntryListComponent} from "./JournalEntryList.js"
 import { JournalForm } from "./JournalForm.js"
-
-//import { getMoods } from "./MoodProvider.js"
+//import "./JournalEntryList.js"
 
 
 
 
 JournalForm()
-// getMoods()
-//   .then(JournalForm)
+
 
 EntryListComponent()
 

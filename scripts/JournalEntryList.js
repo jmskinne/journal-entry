@@ -1,57 +1,40 @@
-import { useJournalEntries, getJournalEntries } from "./JournalDataProvider.js"
-import { JournalEntryComponent } from "./JournalEntry.js"
+import { useJournalEntries, getJournalEntries, } from "./JournalDataProvider.js"
+import { JournalEntryComponent } from "./JournalEntryHTML.js"
 
 // DOM reference to where all entries will be rendered
-const contentTarget = document.querySelector(".entry-container")
+const contentTarget = document.querySelector(".previousEntries")
+const eventHub = document.querySelector(".container")
+
+eventHub.addEventListener("entryDeleted", () => {
+    const allEntries = useJournalEntries()
+    render(allEntries)
+       
+})
 
 export const EntryListComponent = () => {
-    console.log("entry list component function")
     getJournalEntries()
         .then(() => {
             const allEntries = useJournalEntries()
             render(allEntries)
         })
 }
+    
+
+
+eventHub.addEventListener("editNote", customEvent => {
+    const EntrySearchingFor = customEvent.detail.editEntryId
+    const allEntries = useJournalEntries()
+    const noteToEdit = allEntries.find(entry => entry.id === EntrySearchingFor)
+    console.log(noteToEdit)
+    
+
+    
+})
 
 const render = (entryArray) => {
-    const entriesToStrings = entryArray.map(
-        currentEntry => {
-            return JournalEntryComponent(currentEntry)
+    contentTarget.innerHTML = entryArray.map(
+        entry => {
+            return JournalEntryComponent(entry)
         }
     ).join("")
-    console.log("render in the allEntries array -- entry list comp")
-    contentTarget.innerHTML += entriesToStrings
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//     // Use the journal entry data from the data provider component
-//     const entries = useJournalEntries()
-    
-//     let journalHTMLRep = ""
-
-//     for (const entry of entries) {
-//         journalHTMLRep += JournalEntryComponent(entry)
-
-//     }
-//     entryLog.innerHTML += `
-//         <article class="journal__entries">
-//             ${journalHTMLRep}
-//         </article>
-//         `
-    
-    
-// 
-

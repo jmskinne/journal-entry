@@ -1,18 +1,21 @@
 import { saveEntry } from "./JournalDataProvider.js"
 import { getMoods, useMoods } from "./MoodProvider.js"
 
+
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".entry-container")
 
 
 eventHub.addEventListener("click", clickEvent => {
     if(clickEvent.target.id === "recordEntryButton") {
-    
+        
+        //const id = document.querySelector("#entryId")
         const journalDate = document.querySelector("#journalDate")
         const journalConcepts = document.querySelector("#concepts")
         const journalContent = document.querySelector("#entryContent")
         const journalMood = document.querySelector("#mood")
-        
+    
+            
 
         const newJournalEntry = {
             date : journalDate.value,
@@ -20,11 +23,15 @@ eventHub.addEventListener("click", clickEvent => {
             entryContent : journalContent.value,
             moodId : parseInt(journalMood.value),
         }
+            
         saveEntry(newJournalEntry)
+        
         
         
     }
 })
+
+
 
 
 const render = (moodCollection) => {
@@ -60,6 +67,8 @@ const render = (moodCollection) => {
                 
                 
                 <button id="recordEntryButton">Record Journal Entry </button>
+                
+                <input type="hidden" name="entryId" id="entryId">
             
 
             </fieldset>     
@@ -78,4 +87,3 @@ export const JournalForm = () => {
 }
 
 
-//<label for="mood">Choose a mood:</label>

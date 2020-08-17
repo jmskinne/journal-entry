@@ -1,7 +1,6 @@
 import { saveEntry } from "./JournalDataProvider.js"
 import { getMoods, useMoods } from "./MoodProvider.js"
-//import {getJournalEntries, useJournalEntries} from "./JournalDataProvider.js"
-//import { EntryListComponent } from "./JournalEntryList.js"
+
 
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".entry-container")
@@ -9,38 +8,30 @@ const contentTarget = document.querySelector(".entry-container")
 
 eventHub.addEventListener("click", clickEvent => {
     if(clickEvent.target.id === "recordEntryButton") {
-        const id = document.querySelector("#entryId")
-        if(id === "") {
+        
+        //const id = document.querySelector("#entryId")
+        const journalDate = document.querySelector("#journalDate")
+        const journalConcepts = document.querySelector("#concepts")
+        const journalContent = document.querySelector("#entryContent")
+        const journalMood = document.querySelector("#mood")
     
-            const journalDate = document.querySelector("#journalDate")
-            const journalConcepts = document.querySelector("#concepts")
-            const journalContent = document.querySelector("#entryContent")
-            const journalMood = document.querySelector("#mood")
             
 
-            const newJournalEntry = {
-                date : journalDate.value,
-                concept : journalConcepts.value,
-                entryContent : journalContent.value,
-                moodId : parseInt(journalMood.value),
-            }
-            saveEntry(newJournalEntry)
-        } else {
-            //updateEntry 
+        const newJournalEntry = {
+            date : journalDate.value,
+            concept : journalConcepts.value,
+            entryContent : journalContent.value,
+            moodId : parseInt(journalMood.value),
         }
+            
+        saveEntry(newJournalEntry)
+        
         
         
     }
 })
 
-// eventHub.addEventListener("editNote", customEvent => {
-//     const EntrySearchingFor = customEvent.detail.editEntryId
-//     const allEntries = useJournalEntries()
-//     const noteToEdit = allEntries.find(entry => entry.id === EntrySearchingFor)
-    
 
-    
-// })
 
 
 const render = (moodCollection) => {
@@ -76,8 +67,8 @@ const render = (moodCollection) => {
                 
                 
                 <button id="recordEntryButton">Record Journal Entry </button>
-                <button id="editEntry--1">Edit</button>
-                <input type="hidden" name="entryId id="entryId">
+                
+                <input type="hidden" name="entryId" id="entryId">
             
 
             </fieldset>     
@@ -96,4 +87,3 @@ export const JournalForm = () => {
 }
 
 
-//<label for="mood">Choose a mood:</label>

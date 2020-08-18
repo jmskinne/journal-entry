@@ -1,4 +1,4 @@
-import { useJournalEntries, getJournalEntries, } from "./JournalDataProvider.js"
+import { useJournalEntries, getJournalEntries, editEntry } from "./JournalDataProvider.js"
 import { JournalEntryComponent } from "./JournalEntryHTML.js"
 
 // DOM reference to where all entries will be rendered
@@ -21,15 +21,16 @@ export const EntryListComponent = () => {
     
 
 
-eventHub.addEventListener("editNote", customEvent => {
-    const EntrySearchingFor = customEvent.detail.editEntryId
-    const allEntries = useJournalEntries()
-    const noteToEdit = allEntries.find(entry => entry.id === EntrySearchingFor)
-    console.log(noteToEdit)
+// eventHub.addEventListener("editNote", customEvent => {
+//     const EntrySearchingFor = customEvent.detail.editEntryId
     
+//     const allEntries = useJournalEntries()
+//     const entryToEdit = allEntries.find(entry => entry.id === EntrySearchingFor)
+//     console.log(entryToEdit)
+//     editEntry(entryToEdit)
 
     
-})
+// })
 
 const render = (entryArray) => {
     contentTarget.innerHTML = entryArray.map(

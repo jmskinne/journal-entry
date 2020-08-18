@@ -3,7 +3,7 @@
     {
       "date": "2020-08-12",
       "concept": "ewrgerb",
-      "entryContent": "ewrberwb",
+      "entryContent": "ewrberwb edit",
       "moodId": 2,
       "id": 5
     },
@@ -24,8 +24,8 @@
     {
       "date": "2020-08-12",
       "concept": "ewrgerb",
-      "entryContent": "ewrberwb",
-      "moodId": 2,
+      "entryContent": "ewrberwb edit edit",
+      "moodId": 4,
       "id": 8
     },
     {
@@ -34,6 +34,27 @@
       "entryContent": "ejerberberberh work work work",
       "moodId": 2,
       "id": 9
+    },
+    {
+      "date": "2020-08-19",
+      "concept": "reehewrewr",
+      "entryContent": "werberew",
+      "moodId": 3,
+      "id": 10
+    },
+    {
+      "date": "2020-08-20",
+      "concept": "evewrber",
+      "entryContent": "weberewhb",
+      "moodId": 4,
+      "id": 11
+    },
+    {
+      "date": "2020-08-19",
+      "concept": "test",
+      "entryContent": "test",
+      "moodId": 3,
+      "id": 12
     }
   ],
   "moods": [

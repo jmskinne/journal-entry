@@ -14,7 +14,8 @@ eventHub.addEventListener("click", clickEvent => {
         const journalConcepts = document.querySelector("#concepts")
         const journalContent = document.querySelector("#entryContent")
         const journalMood = document.querySelector("#mood")
-    
+        
+        
         if(journalDate.value && journalConcepts.value && journalContent.value && journalMood.value) {
             if(id.value === "") {
 
@@ -24,17 +25,18 @@ eventHub.addEventListener("click", clickEvent => {
                     entryContent : journalContent.value,
                     moodId : parseInt(journalMood.value),
                 }
-                    
                 saveEntry(newJournalEntry)
+                
             } else {
                 const editedEntry = {
                     date : journalDate.value,
                     concept : journalConcepts.value,
-                    entryContent: journalConcepts.value,
+                    entryContent: journalContent.value,
                     moodId : parseInt(journalMood.value),
                     id : parseInt(id.value)
                 }
                 editEntry(editedEntry)
+                
             }
         
         
@@ -50,20 +52,20 @@ eventHub.addEventListener("editNote", customEvent => {
     
     const allEntries = useJournalEntries()
     const entryToEdit = allEntries.find(entry => entry.id === EntrySearchingFor)
-
+    
     const id = document.querySelector("#entryId")
     const journalDate = document.querySelector("#journalDate")
     const journalConcepts = document.querySelector("#concepts")
     const journalContent = document.querySelector("#entryContent")
     const journalMood = document.querySelector("#mood")
+    //get from found object 
+    id.value = entryToEdit.id 
+    journalDate.value = entryToEdit.date 
+    journalConcepts.value = entryToEdit.concept
+    journalContent.value = entryToEdit.entryContent
+    journalMood.value = entryToEdit.moodId
 
-    id.value = EntrySearchingFor
-    journalDate.value = entryToEdit.journalDate
-    journalConcepts.value = entryToEdit.journalConcepts
-    journalContent.value = entryToEdit.journalContent
-    journalMood.value = entryToEdit.journalMood
-
-
+    
     
     
 })

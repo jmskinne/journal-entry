@@ -48,12 +48,15 @@ export const deleteEntry = (entryId) => {
     .then(entryDeleted)
 }
 
-export const editEntry = (entryId) => {
-    return fetch(`http://localhost:3000/entries/${entryId}`, {
+export const editEntry = (entry) => {
+    return fetch(`http://localhost:3000/entries/${entry.id}`, {
         method : "PUT",
         headers : {
             "Content-Type" : "application/json"
         },
-        body : JSON.stringify(entryId)
+        body : JSON.stringify(entry) 
     })
+    .then(getJournalEntries)
+    .then(dispatchStateChangeEvent)
+
 }
